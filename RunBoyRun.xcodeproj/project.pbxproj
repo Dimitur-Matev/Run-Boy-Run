@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2182E513C791955ABB8DD77D /* Pods_RunBoyRunTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E08A95145D7BD79E6826264 /* Pods_RunBoyRunTests.framework */; };
+		7F159A562672213400D949FF /* SpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F159A552672213400D949FF /* SpotifyManager.swift */; };
+		7F159A5C2672247200D949FF /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F159A5B2672247200D949FF /* SpotifyiOS.framework */; };
 		7F82D96D26720E0100319F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D96C26720E0100319F66 /* AppDelegate.swift */; };
 		7F82D96F26720E0100319F66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D96E26720E0100319F66 /* SceneDelegate.swift */; };
 		7F82D97126720E0100319F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D97026720E0100319F66 /* ViewController.swift */; };
@@ -42,6 +44,9 @@
 		3039A7EBB0B6144369F5FD2F /* Pods-RunBoyRunTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunBoyRunTests.release.xcconfig"; path = "Target Support Files/Pods-RunBoyRunTests/Pods-RunBoyRunTests.release.xcconfig"; sourceTree = "<group>"; };
 		674E4929FF890F627351A455 /* Pods_RunBoyRun_RunBoyRunUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunBoyRun_RunBoyRunUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEFD5D3452AC95AD0769EDF /* Pods_RunBoyRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunBoyRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F159A552672213400D949FF /* SpotifyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyManager.swift; sourceTree = "<group>"; };
+		7F159A5B2672247200D949FF /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+		7F159A5D26722E0100D949FF /* RunBoyRun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunBoyRun-Bridging-Header.h"; sourceTree = "<group>"; };
 		7F82D96926720E0100319F66 /* RunBoyRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunBoyRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F82D96C26720E0100319F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F82D96E26720E0100319F66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A292352A4E2BB800BE6D29F9 /* Pods_RunBoyRun.framework in Frameworks */,
+				7F159A5C2672247200D949FF /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,7 @@
 		5861264CA1187D34345B93A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F159A5B2672247200D949FF /* SpotifyiOS.framework */,
 				7DEFD5D3452AC95AD0769EDF /* Pods_RunBoyRun.framework */,
 				674E4929FF890F627351A455 /* Pods_RunBoyRun_RunBoyRunUITests.framework */,
 				8E08A95145D7BD79E6826264 /* Pods_RunBoyRunTests.framework */,
@@ -104,6 +111,7 @@
 		7F82D96026720E0100319F66 = {
 			isa = PBXGroup;
 			children = (
+				7F159A5D26722E0100D949FF /* RunBoyRun-Bridging-Header.h */,
 				7F82D96B26720E0100319F66 /* RunBoyRun */,
 				7F82D98226720E0200319F66 /* RunBoyRunTests */,
 				7F82D98D26720E0200319F66 /* RunBoyRunUITests */,
@@ -172,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				7F82D97226720E0100319F66 /* Main.storyboard */,
-				7F82D97526720E0200319F66 /* Assets.xcassets */,
 				7F82D97726720E0200319F66 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -181,6 +188,7 @@
 		7F82D9A1267218C600319F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7F82D97526720E0200319F66 /* Assets.xcassets */,
 				7F82D9A22672194000319F66 /* Managers */,
 				7F82D96C26720E0100319F66 /* AppDelegate.swift */,
 				7F82D96E26720E0100319F66 /* SceneDelegate.swift */,
@@ -191,6 +199,7 @@
 		7F82D9A22672194000319F66 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				7F159A552672213400D949FF /* SpotifyManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -205,7 +214,6 @@
 				980C88FA472CB48595698F92 /* Pods-RunBoyRunTests.debug.xcconfig */,
 				3039A7EBB0B6144369F5FD2F /* Pods-RunBoyRunTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -447,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F159A562672213400D949FF /* SpotifyManager.swift in Sources */,
 				7F82D97126720E0100319F66 /* ViewController.swift in Sources */,
 				7F82D96D26720E0100319F66 /* AppDelegate.swift in Sources */,
 				7F82D96F26720E0100319F66 /* SceneDelegate.swift in Sources */,
@@ -628,13 +637,24 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CUJR4CJAT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RunBoyRun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"MQTTClient\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Dimo.RunBoyRun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunBoyRun-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -648,13 +668,24 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CUJR4CJAT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RunBoyRun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"MQTTClient\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Dimo.RunBoyRun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunBoyRun-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
