@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		128950322676B332008FE9B8 /* exampleProgram.json in Resources */ = {isa = PBXBuildFile; fileRef = 128950312676B332008FE9B8 /* exampleProgram.json */; };
+		128950342676B63D008FE9B8 /* ProgramJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950332676B63D008FE9B8 /* ProgramJson.swift */; };
+		128950362676B76A008FE9B8 /* ProgramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950352676B76A008FE9B8 /* ProgramManager.swift */; };
+		128950382676B77C008FE9B8 /* SectionJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950372676B77C008FE9B8 /* SectionJson.swift */; };
+		1289503A2676C365008FE9B8 /* TrackJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950392676C365008FE9B8 /* TrackJson.swift */; };
+		1289503E2676C561008FE9B8 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1289503D2676C561008FE9B8 /* Program.swift */; };
+		128950402676C600008FE9B8 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1289503F2676C600008FE9B8 /* Section.swift */; };
+		128950422676C7EA008FE9B8 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950412676C7EA008FE9B8 /* Track.swift */; };
 		2182E513C791955ABB8DD77D /* Pods_RunBoyRunTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E08A95145D7BD79E6826264 /* Pods_RunBoyRunTests.framework */; };
 		7F159A562672213400D949FF /* SpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F159A552672213400D949FF /* SpotifyManager.swift */; };
 		7F159A5C2672247200D949FF /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F159A5B2672247200D949FF /* SpotifyiOS.framework */; };
@@ -40,6 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		128950312676B332008FE9B8 /* exampleProgram.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exampleProgram.json; sourceTree = "<group>"; };
+		128950332676B63D008FE9B8 /* ProgramJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgramJson.swift; path = RunBoyRun/Resources/Programs/ProgramJson.swift; sourceTree = SOURCE_ROOT; };
+		128950352676B76A008FE9B8 /* ProgramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramManager.swift; sourceTree = "<group>"; };
+		128950372676B77C008FE9B8 /* SectionJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SectionJson.swift; path = RunBoyRun/Resources/Managers/SectionJson.swift; sourceTree = SOURCE_ROOT; };
+		128950392676C365008FE9B8 /* TrackJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackJson.swift; path = RunBoyRun/Resources/Managers/TrackJson.swift; sourceTree = SOURCE_ROOT; };
+		1289503D2676C561008FE9B8 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		1289503F2676C600008FE9B8 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		128950412676C7EA008FE9B8 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		264DBD5A63E2991AEB30B0A8 /* Pods-RunBoyRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunBoyRun.debug.xcconfig"; path = "Target Support Files/Pods-RunBoyRun/Pods-RunBoyRun.debug.xcconfig"; sourceTree = "<group>"; };
 		3039A7EBB0B6144369F5FD2F /* Pods-RunBoyRunTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunBoyRunTests.release.xcconfig"; path = "Target Support Files/Pods-RunBoyRunTests/Pods-RunBoyRunTests.release.xcconfig"; sourceTree = "<group>"; };
 		674E4929FF890F627351A455 /* Pods_RunBoyRun_RunBoyRunUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunBoyRun_RunBoyRunUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +113,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		128950302676B30E008FE9B8 /* Programs */ = {
+			isa = PBXGroup;
+			children = (
+				128950312676B332008FE9B8 /* exampleProgram.json */,
+			);
+			path = Programs;
+			sourceTree = "<group>";
+		};
+		1289503B2676C495008FE9B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1289503D2676C561008FE9B8 /* Program.swift */,
+				1289503F2676C600008FE9B8 /* Section.swift */,
+				128950412676C7EA008FE9B8 /* Track.swift */,
+				7F82D99C2672185400319F66 /* JSONModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5861264CA1187D34345B93A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,10 +169,10 @@
 		7F82D96B26720E0100319F66 /* RunBoyRun */ = {
 			isa = PBXGroup;
 			children = (
+				1289503B2676C495008FE9B8 /* Models */,
 				7F82D9A1267218C600319F66 /* Resources */,
 				7F82D99F2672188000319F66 /* View */,
 				7F82D99E2672187600319F66 /* Controllers */,
-				7F82D99C2672185400319F66 /* Models */,
 				7F82D97A26720E0200319F66 /* Info.plist */,
 			);
 			path = RunBoyRun;
@@ -161,11 +196,15 @@
 			path = RunBoyRunUITests;
 			sourceTree = "<group>";
 		};
-		7F82D99C2672185400319F66 /* Models */ = {
+		7F82D99C2672185400319F66 /* JSONModels */ = {
 			isa = PBXGroup;
 			children = (
+				128950332676B63D008FE9B8 /* ProgramJson.swift */,
+				128950372676B77C008FE9B8 /* SectionJson.swift */,
+				128950392676C365008FE9B8 /* TrackJson.swift */,
 			);
-			path = Models;
+			name = JSONModels;
+			path = ../JSONModels;
 			sourceTree = "<group>";
 		};
 		7F82D99E2672187600319F66 /* Controllers */ = {
@@ -188,6 +227,7 @@
 		7F82D9A1267218C600319F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				128950302676B30E008FE9B8 /* Programs */,
 				7F82D97526720E0200319F66 /* Assets.xcassets */,
 				7F82D9A22672194000319F66 /* Managers */,
 				7F82D96C26720E0100319F66 /* AppDelegate.swift */,
@@ -200,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				7F159A552672213400D949FF /* SpotifyManager.swift */,
+				128950352676B76A008FE9B8 /* ProgramManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -328,6 +369,7 @@
 				7F82D97926720E0200319F66 /* LaunchScreen.storyboard in Resources */,
 				7F82D97626720E0200319F66 /* Assets.xcassets in Resources */,
 				7F82D97426720E0100319F66 /* Main.storyboard in Resources */,
+				128950322676B332008FE9B8 /* exampleProgram.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,9 +497,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				128950342676B63D008FE9B8 /* ProgramJson.swift in Sources */,
+				128950422676C7EA008FE9B8 /* Track.swift in Sources */,
 				7F159A562672213400D949FF /* SpotifyManager.swift in Sources */,
 				7F82D97126720E0100319F66 /* ViewController.swift in Sources */,
+				1289503A2676C365008FE9B8 /* TrackJson.swift in Sources */,
+				128950382676B77C008FE9B8 /* SectionJson.swift in Sources */,
+				128950402676C600008FE9B8 /* Section.swift in Sources */,
+				1289503E2676C561008FE9B8 /* Program.swift in Sources */,
 				7F82D96D26720E0100319F66 /* AppDelegate.swift in Sources */,
+				128950362676B76A008FE9B8 /* ProgramManager.swift in Sources */,
 				7F82D96F26720E0100319F66 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
