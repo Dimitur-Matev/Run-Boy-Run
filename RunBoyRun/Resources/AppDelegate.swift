@@ -317,8 +317,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         do{
-            let tracks = try JSONDecoder().decode(TrackJson.self, from: jsonData!)
-            print(tracks.analysisURL)
+            let tracks = try decoder.decode(TrackJSON.self, from: jsonData!)
+            print(tracks.count)
+
         }catch{
             print(error.localizedDescription)
         }

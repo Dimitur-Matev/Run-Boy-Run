@@ -1,13 +1,12 @@
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
 //
-//  Track.swift
-//  RunBoyRun
-//
-//  Created by Dimitar Matev on 14/06/2021.
-//
+//   let trackJSON = try? newJSONDecoder().decode(TrackJSON.self, from: jsonData)
 
 import Foundation
 
-struct TrackJson: Codable {
+// MARK: - TrackJSONElement
+struct TrackJSONElement: Codable {
     let acousticness: Double
     let analysisSections: [[String: Double]]
     let analysisURL: String
@@ -28,7 +27,7 @@ struct TrackJson: Codable {
     let trackHref: String
     let type, uri: String
     let valence: Double
-    
+
     enum CodingKeys: String, CodingKey {
         case acousticness
         case analysisSections = "analysis_sections"
@@ -46,3 +45,4 @@ struct TrackJson: Codable {
     }
 }
 
+typealias TrackJSON = [TrackJSONElement]
