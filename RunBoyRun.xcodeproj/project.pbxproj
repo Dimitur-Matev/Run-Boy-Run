@@ -26,6 +26,8 @@
 		7F82D97926720E0200319F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F82D97726720E0200319F66 /* LaunchScreen.storyboard */; };
 		7F82D98426720E0200319F66 /* RunBoyRunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D98326720E0200319F66 /* RunBoyRunTests.swift */; };
 		7F82D98F26720E0200319F66 /* RunBoyRunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D98E26720E0200319F66 /* RunBoyRunUITests.swift */; };
+		7FCF06E12677B64400AB7B20 /* suggested_playlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FCF06E02677B5CF00AB7B20 /* suggested_playlist.json */; };
+		7FCF06E42677B6F100AB7B20 /* rawdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF06E32677B6F100AB7B20 /* rawdata.swift */; };
 		A292352A4E2BB800BE6D29F9 /* Pods_RunBoyRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEFD5D3452AC95AD0769EDF /* Pods_RunBoyRun.framework */; };
 		F12FB06096F8B97A03A700CF /* Pods_RunBoyRun_RunBoyRunUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674E4929FF890F627351A455 /* Pods_RunBoyRun_RunBoyRunUITests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +79,8 @@
 		7F82D98A26720E0200319F66 /* RunBoyRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunBoyRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F82D98E26720E0200319F66 /* RunBoyRunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunBoyRunUITests.swift; sourceTree = "<group>"; };
 		7F82D99026720E0200319F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FCF06E02677B5CF00AB7B20 /* suggested_playlist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = suggested_playlist.json; sourceTree = "<group>"; };
+		7FCF06E32677B6F100AB7B20 /* rawdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rawdata.swift; sourceTree = "<group>"; };
 		8E08A95145D7BD79E6826264 /* Pods_RunBoyRunTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunBoyRunTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		980C88FA472CB48595698F92 /* Pods-RunBoyRunTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunBoyRunTests.debug.xcconfig"; path = "Target Support Files/Pods-RunBoyRunTests/Pods-RunBoyRunTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A61B9A68BE65418C47EB5D4D /* Pods-RunBoyRun-RunBoyRunUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunBoyRun-RunBoyRunUITests.release.xcconfig"; path = "Target Support Files/Pods-RunBoyRun-RunBoyRunUITests/Pods-RunBoyRun-RunBoyRunUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		1289503B2676C495008FE9B8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7FCF06E22677B6E400AB7B20 /* data */,
 				1289503D2676C561008FE9B8 /* Program.swift */,
 				1289503F2676C600008FE9B8 /* Section.swift */,
 				128950412676C7EA008FE9B8 /* Track.swift */,
@@ -138,6 +143,7 @@
 		7F82D96026720E0100319F66 = {
 			isa = PBXGroup;
 			children = (
+				7FCF06E02677B5CF00AB7B20 /* suggested_playlist.json */,
 				7F159A5D26722E0100D949FF /* RunBoyRun-Bridging-Header.h */,
 				7F82D96B26720E0100319F66 /* RunBoyRun */,
 				7F82D98226720E0200319F66 /* RunBoyRunTests */,
@@ -235,6 +241,14 @@
 				128950352676B76A008FE9B8 /* ProgramManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		7FCF06E22677B6E400AB7B20 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				7FCF06E32677B6F100AB7B20 /* rawdata.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		A199804F5CD92BDF573C67E4 /* Pods */ = {
@@ -358,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FCF06E12677B64400AB7B20 /* suggested_playlist.json in Resources */,
 				7F82D97926720E0200319F66 /* LaunchScreen.storyboard in Resources */,
 				7F82D97626720E0200319F66 /* Assets.xcassets in Resources */,
 				7F82D97426720E0100319F66 /* Main.storyboard in Resources */,
@@ -493,6 +508,7 @@
 				128950422676C7EA008FE9B8 /* Track.swift in Sources */,
 				7F159A562672213400D949FF /* SpotifyManager.swift in Sources */,
 				7F82D97126720E0100319F66 /* ViewController.swift in Sources */,
+				7FCF06E42677B6F100AB7B20 /* rawdata.swift in Sources */,
 				1289503A2676C365008FE9B8 /* TrackJson.swift in Sources */,
 				128950382676B77C008FE9B8 /* SectionJson.swift in Sources */,
 				128950402676C600008FE9B8 /* Section.swift in Sources */,
