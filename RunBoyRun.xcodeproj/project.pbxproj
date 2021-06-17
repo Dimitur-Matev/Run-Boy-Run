@@ -14,10 +14,10 @@
 		1289503A2676C365008FE9B8 /* TrackJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950392676C365008FE9B8 /* TrackJson.swift */; };
 		1289503E2676C561008FE9B8 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1289503D2676C561008FE9B8 /* Program.swift */; };
 		128950402676C600008FE9B8 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1289503F2676C600008FE9B8 /* Section.swift */; };
-		128950422676C7EA008FE9B8 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950412676C7EA008FE9B8 /* Track.swift */; };
 		2182E513C791955ABB8DD77D /* Pods_RunBoyRunTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E08A95145D7BD79E6826264 /* Pods_RunBoyRunTests.framework */; };
 		7F159A562672213400D949FF /* SpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F159A552672213400D949FF /* SpotifyManager.swift */; };
 		7F159A5C2672247200D949FF /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F159A5B2672247200D949FF /* SpotifyiOS.framework */; };
+		7F73B03D267B75A900369033 /* TripManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F73B03C267B75A900369033 /* TripManager.swift */; };
 		7F82D96D26720E0100319F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D96C26720E0100319F66 /* AppDelegate.swift */; };
 		7F82D96F26720E0100319F66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D96E26720E0100319F66 /* SceneDelegate.swift */; };
 		7F82D97126720E0100319F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D97026720E0100319F66 /* ViewController.swift */; };
@@ -57,7 +57,6 @@
 		128950392676C365008FE9B8 /* TrackJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackJson.swift; path = RunBoyRun/Resources/Managers/TrackJson.swift; sourceTree = SOURCE_ROOT; };
 		1289503D2676C561008FE9B8 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		1289503F2676C600008FE9B8 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		128950412676C7EA008FE9B8 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		264DBD5A63E2991AEB30B0A8 /* Pods-RunBoyRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunBoyRun.debug.xcconfig"; path = "Target Support Files/Pods-RunBoyRun/Pods-RunBoyRun.debug.xcconfig"; sourceTree = "<group>"; };
 		3039A7EBB0B6144369F5FD2F /* Pods-RunBoyRunTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunBoyRunTests.release.xcconfig"; path = "Target Support Files/Pods-RunBoyRunTests/Pods-RunBoyRunTests.release.xcconfig"; sourceTree = "<group>"; };
 		674E4929FF890F627351A455 /* Pods_RunBoyRun_RunBoyRunUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunBoyRun_RunBoyRunUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +64,7 @@
 		7F159A552672213400D949FF /* SpotifyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyManager.swift; sourceTree = "<group>"; };
 		7F159A5B2672247200D949FF /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		7F159A5D26722E0100D949FF /* RunBoyRun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunBoyRun-Bridging-Header.h"; sourceTree = "<group>"; };
+		7F73B03C267B75A900369033 /* TripManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripManager.swift; sourceTree = "<group>"; };
 		7F82D96926720E0100319F66 /* RunBoyRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunBoyRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F82D96C26720E0100319F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F82D96E26720E0100319F66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +123,6 @@
 				7FCF06E22677B6E400AB7B20 /* data */,
 				1289503D2676C561008FE9B8 /* Program.swift */,
 				1289503F2676C600008FE9B8 /* Section.swift */,
-				128950412676C7EA008FE9B8 /* Track.swift */,
 				7F82D99C2672185400319F66 /* JSONModels */,
 			);
 			path = Models;
@@ -238,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				7F159A552672213400D949FF /* SpotifyManager.swift */,
+				7F73B03C267B75A900369033 /* TripManager.swift */,
 				128950352676B76A008FE9B8 /* ProgramManager.swift */,
 			);
 			path = Managers;
@@ -504,8 +504,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F73B03D267B75A900369033 /* TripManager.swift in Sources */,
 				128950342676B63D008FE9B8 /* ProgramJson.swift in Sources */,
-				128950422676C7EA008FE9B8 /* Track.swift in Sources */,
 				7F159A562672213400D949FF /* SpotifyManager.swift in Sources */,
 				7F82D97126720E0100319F66 /* ViewController.swift in Sources */,
 				7FCF06E42677B6F100AB7B20 /* rawdata.swift in Sources */,

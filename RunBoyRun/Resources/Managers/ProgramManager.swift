@@ -9,7 +9,7 @@ import Foundation
 
 class ProgramManager{
     
-    let programs : [ProgramJson]?
+//    let programs : [ProgramJson]?
     
     init() {
         //TODO: load programs from file
@@ -21,7 +21,7 @@ class ProgramManager{
 //        }else{
 //            programs = []
 //        }
-        programs = []
+//        programs = []
     }
     
     private func readLocalFile(forName name: String) -> Data? {
@@ -38,11 +38,11 @@ class ProgramManager{
         return nil
     }
     
-    public func Start(program: Program){
-        //TODO: foreach program.sections and get the playlists
-        // then pass the songs to the Spotify Manager
-        //-----------------------------
-        
-    }
-    
+//    public func Start(program: Program){
+//        //TODO: foreach program.sections and get the playlists
+//        // then pass the songs to the Spotify Manager
+//        //-----------------------------
+//        
+//    }
+//    
 }

@@ -4,6 +4,32 @@
 //
 //  Created by Dimo Popov on 10/06/2021.
 //
+let programString = """
+    [
+        {
+            "name": "Example 1",
+            "description": "This training program will make you feel better. I promise ;)",
+            "sections": [
+                {"1": 3.5},
+                {"2": 3.0},
+                {"5": 8.4},
+                {"1": 2.0},
+                {"4": 4.0}
+            ]
+        },
+        {
+            "name": "Example 2",
+            "description": "This training program will make you feel better. I promise ;)",
+            "sections": [
+                {"1": 3.5},
+                {"2": 3.0},
+                {"5": 8.4},
+                {"1": 2.0},
+                {"4": 4.0}
+            ]
+        }
+    ]
+"""
 let jsonString = """
     [
         {
@@ -312,13 +338,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let jsonData = jsonString.data(using: .utf8)
+    let jsonProgram = programString.data(using: .utf8)
     let decoder = JSONDecoder()
    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         do{
             let tracks = try decoder.decode(TrackJSON.self, from: jsonData!)
-            print(tracks.count)
+            let programs = try decoder.decode(ProgramJSON.self, from: jsonData!)
+            print(tracks[0].analysisURL)
+            print(programs[1].name)
 
         }catch{
             print(error.localizedDescription)

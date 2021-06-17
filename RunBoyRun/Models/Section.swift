@@ -10,12 +10,12 @@ import Foundation
 struct Section {
     let type: String
     let duration: Double
-    var playlist: [Track]
+//    var playlist: [Track]
     
     init (section: SectionJson){
         self.duration = section.duration
         self.type = section.type
-        playlist = []
+//        playlist = []
     }
     
     func GeneratePlaylist(){
