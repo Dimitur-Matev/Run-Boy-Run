@@ -344,10 +344,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         do{
-            let tracks = try decoder.decode(TrackJSON.self, from: jsonData!)
-            let programs = try decoder.decode(ProgramJSON.self, from: jsonData!)
-            print(tracks[0].analysisURL)
-            print(programs[1].name)
+            //let tracks = try decoder.decode(TrackJSON.self, from: jsonData!)
+            //let programs = try decoder.decode(ProgramJSON.self, from: jsonData!)
+            //print(tracks[0].analysisURL)
+            //print(programs[1].name)
+            print("READING THE JSON FILE")
+            let data = readLocalFile(forName: "suggested_playlist")
+            //var tracksJson: Data = Data()
+            //var tripManager: TripManager
+            
+            if let unwrappedData = data{
+                print("---UNWRAPED---")
+                let tracks = parse(jsonData: unwrappedData)
+                var tripManager = TripManager(tracks: tracks)
+                print("--Trip Manager-- IS -- READY")
+                
+                tripManager.getIntenseSongs()
+                tripManager.getRelaxSongs()
+                tripManager.getJoggingSongs()
+                tripManager.getWalkingSongs()
+                
+            }else{
+                print("ERROR in SORTING the TRACKS")
+            }
+            
+            
 
         }catch{
             print(error.localizedDescription)
@@ -368,6 +389,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    private func readLocalFile(forName name: String) -> Data? {
+        do {
+            if let bundlePath = Bundle.main.path(forResource: name,
+                                                 ofType: "json"),
+                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                return jsonData
+            }
+        } catch {
+            print(error)
+        }
+        
+        return nil
+    }
+    
+    private func parse(jsonData: Data) -> [TrackJSONElement]{
+        var decodedData: [TrackJSONElement] = []
+        do {
+            decodedData = try JSONDecoder().decode([TrackJSONElement].self,
+                                                       from: jsonData)
+            
+            print("===================================")
+        } catch {
+            print("decode error")
+        }
+        return decodedData
     }
 
 
