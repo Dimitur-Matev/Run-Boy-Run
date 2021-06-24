@@ -69,7 +69,7 @@ let programString = """
 import SpriteKit
 import UIKit
 
-class RunViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, SKScene {
+class RunViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
 
 //    @IBOutlet weak var program1: UIButton!
@@ -205,27 +205,27 @@ class RunViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     
     
-    func startRun() {
+//    func startRun() {
+//
+//        startRunTimer()
+//        timeStarted = true
+//    }
+//
+//    func resetRun() {
+//
+//        timeStarted = false
+//        stopRunTimer()
+//        seconds = 0
+//    }
 
-        startRunTimer()
-        timeStarted = true
-    }
+//    func startRunTimer() {
+//        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+//    }
 
-    func resetRun() {
-
-        timeStarted = false
-        stopRunTimer()
-        seconds = 0
-    }
-
-    func startRunTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
-    }
-
-    func updateTimer() {
-        seconds += 1
-        //activeTimer.text = timeString(time: TimeInterval(seconds))
-    }
+//    func updateTimer() {
+//        seconds += 1
+//        //activeTimer.text = timeString(time: TimeInterval(seconds))
+//    }
 
     func timeString(time:TimeInterval) -> String {
         let hours = Int(time) / 3600
@@ -234,11 +234,11 @@ class RunViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         return String(format:"%02i:%02i.%02i", hours, minutes, seconds)
     }
 
-
-    func stopRunTimer() {
-        timer.invalidate()
-        //removeAction(forKey: "timer")
-    }
+//
+//    func stopRunTimer() {
+//        timer.invalidate()
+//        //removeAction(forKey: "timer")
+//    }
 
    
     override func didReceiveMemoryWarning() {
