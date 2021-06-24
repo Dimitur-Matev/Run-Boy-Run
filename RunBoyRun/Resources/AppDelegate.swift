@@ -75,7 +75,7 @@ extension Notification.Name {
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //let jsonData = jsonString.data(using: .utf8)
-    let jsonProgram = programString.data(using: .utf8)
+    //let jsonProgram = programString.data(using: .utf8)
     let decoder = JSONDecoder()
     let playURI = "spotify:track:4tmIJTSnuvskqsPwB5RCqx"
     
