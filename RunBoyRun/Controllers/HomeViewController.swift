@@ -15,10 +15,11 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var program3: UIButton!
     @IBOutlet weak var program4: UIButton!
     @IBAction func startB (sender: UIButton!) {
-
+        
         performSegue(withIdentifier: "second", sender: self)
 
     }
+    @IBOutlet weak var startA: UIButton!
     @IBOutlet weak var spotifyButton: UIButton!
     @IBOutlet weak var playList: UIButton!
     @IBOutlet weak var chooseMusic: UILabel!
@@ -39,8 +40,7 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         program4.layer.cornerRadius = 10
         program4.clipsToBounds = true
         program4.setTitle("Hardcore", for: .normal)
-        
-//        StartB.setTitle("Start", for: .normal)
+        //        StartB.setTitle("Start", for: .normal)
         playList.layer.cornerRadius = 10
         playList.clipsToBounds = true
         playList.setTitle("Select Playlist", for: .normal)
@@ -86,6 +86,7 @@ extension UIButton {
     func startAnimatingPressActions() {
         addTarget(self, action: #selector(animateDown), for: [.touchDown, .touchDragEnter])
         addTarget(self, action: #selector(animateUp), for: [.touchDragExit, .touchCancel, .touchUpInside, .touchUpOutside])
+    
     }
     
     @objc private func animateDown(sender: UIButton) {

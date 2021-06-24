@@ -19,7 +19,8 @@ override init(frame: CGRect) {
         }
         
         required init?(coder: NSCoder) {
-            supefunc; r.init(coder: coder)
+            super.init(coder: coder)
+            
         }
 
     func createCircularPath() {
