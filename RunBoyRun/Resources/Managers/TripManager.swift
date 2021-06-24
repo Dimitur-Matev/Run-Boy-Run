@@ -3,54 +3,118 @@
 //  RunBoyRun
 //
 //  Created by Dimo Popov on 17/06/2021.
-////
-//func getIntenseSongs(){
-//    //HIGH BPM HIGH Q
-//}
-//func getJoggingSongs(){
-//    //Medium BPM High Q
-//}
-//func getWalkingSongs(){
-//    //Low BPM Medium Q
-//}
-//func getRelaxSongs(){
-//    //LOW BPM LOW Q
-//}
-//}
+
 
 import Foundation
 
 class TripManager{
-    let tracks: TrackJSON
-    let program: ProgramJSON
-    var inteseTracks: [ProgramJSONElement]
-    var joggingTracks: [ProgramJSONElement]
-    var walkingTracks: [ProgramJSONElement]
-    var relaxTracks: [ProgramJSONElement]
-    init(tracks: TrackJSON, program: ProgramJSON){
+    var tracks: TrackJSON
+    //let program: ProgramJSON
+    var inteseTracks: [TrackJSON]
+    var joggingTracks: [TrackJSON]
+    var walkingTracks: [TrackJSON]
+    var relaxTracks: [TrackJSON]
+    
+    var highQ: TrackJSONElement?
+    var lowQ: TrackJSONElement?
+    var middleQ: Double
+    
+    var highToMidQ: Double
+    var MidToLowQ: Double
+    
+    var highTempo: TrackJSONElement?
+    var lowTempo: TrackJSONElement?
+    var middleTempo: Double
+    
+    var highToMidTempo: Double
+    var MidToLowTempo: Double
+    
+    var totalSongs: Int
+    var songsPerTypeOfSection: Int
+    init(tracks: TrackJSON){
         self.tracks = tracks
-        self.program = program
+        //self.program = program
         self.inteseTracks = []
         self.joggingTracks = []
         self.walkingTracks = []
         self.relaxTracks = []
+        
+        
+        self.highQ = tracks.max {$0.q < $1.q}
+        self.lowQ = tracks.min{$0.q > $1.q}
+        self.middleQ = (highQ!.q+lowQ!.q)/2
+        
+        self.highToMidQ = (highQ!.q - middleQ)/2
+        self.MidToLowQ = (middleQ - lowQ!.q)/2
+        
+        self.highTempo = tracks.max {$0.tempo < $1.tempo}
+        self.lowTempo = tracks.min {$0.tempo > $1.tempo}
+        self.middleTempo = (highTempo!.q+lowTempo!.q)/2
+        
+        self.highToMidTempo = (highTempo!.q - middleTempo)/2
+        self.MidToLowTempo = (middleTempo - lowTempo!.q)/2
+        
+        self.totalSongs = tracks.count
+        print("TOTAL SONGS:" + String(totalSongs))
+        self.songsPerTypeOfSection = totalSongs/4
+        print("SONGS PER:" + String(songsPerTypeOfSection))
 
     }
     
-    func sortTracks(){
-//        let bestQ: Int
-        let bestQ = tracks.max {$0.q < $1.q}
-        let lowQ = tracks.min{$0.q > $1.q}
-        let highTempo = tracks.max {$0.tempo < $1.tempo}
-        let lowTempo = tracks.min {$0.tempo > $1.tempo}
-        for track in tracks {
-//            if(track.tempo-5.0 <= highTempo?.tempo ?? default value){
-//            inteseTracks.append(track)
-            }
-        }
-    
     func matchTrackToSection(){
         
+    }
+    
+    //HIGH BPM HIGH Q
+    func getIntenseSongs() -> [TrackJSONElement]{
+
+        
+        //tracks.sort{$0.tempo < $1.tempo && $0.q < middleQ && $1.q < middleQ && $0.tempo < middleTempo && $1.tempo < middleTempo} // Ascending
+        //so the high bpm and q are at the end
+        tracks.sort{$0.q < $1.q || $0.tempo < $1.tempo}
+        var trackList: [TrackJSONElement] = []
+        print("----------------INTENSE-SONGS-----------------")
+        for _ in 0...songsPerTypeOfSection{
+            
+            if let unwrappedTrack = tracks.popLast(){  // here we are poping the last element
+                trackList.append(unwrappedTrack)
+                print("---" + unwrappedTrack.artist)
+                print("---" + String(unwrappedTrack.tempo))
+                print("---" + String(unwrappedTrack.q))
+                print("-------------------------------------")
+            }else{
+                print("ERROR in SORTING the TRACKS")
+            }
+            
+        }
+        
+        //for track in trackList
+        print("----------------INTENSE-SONGS-----------------")
+        return trackList
+    }
+    
+    //LOW BPM LOW Q
+    func getRelaxSongs()-> [TrackJSONElement]{
+        
+        print("----------------RELAX-SONGS-----------------")
+        
+        tracks.sort{$0.q > $1.q || $0.tempo > $1.tempo} // desc
+        var trackList: [TrackJSONElement] = []
+        
+        for _ in 0...songsPerTypeOfSection{
+            
+            if let unwrappedTrack = tracks.popLast(){
+                trackList.append(unwrappedTrack)
+                print("---" + unwrappedTrack.artist)
+                print("---" + String(unwrappedTrack.tempo))
+                print("---" + String(unwrappedTrack.q))
+            }else{
+                print("ERROR in SORTING the TRACKS")
+            }
+            
+        }
+        print("----------------RELAX-SONGS-----------------")
+        return trackList
     }
     func addVocalNotifications(){
         
@@ -60,5 +124,52 @@ class TripManager{
         
     }
     
+    func getJoggingSongs()-> [TrackJSONElement]{
+        print("----------------JOGGING-SONGS-----------------")
+        //Medium BPM High Q
+        tracks.sort{$0.q < $1.q || $0.tempo < $1.tempo} // Ascending so the high bpm and q are at the end
+        var trackList: [TrackJSONElement] = []
+        
+        for _ in 0...songsPerTypeOfSection{
+            
+            if let unwrappedTrack = tracks.popLast(){  // here we are poping the last element
+                trackList.append(unwrappedTrack)
+                print("---" + unwrappedTrack.artist)
+                print("---" + String(unwrappedTrack.tempo))
+                print("---" + String(unwrappedTrack.q))
+            }else{
+                print("ERROR in SORTING the TRACKS")
+            }
+            
+        }
+        print("----------------JOGGING-SONGS-----------------")
+        return trackList
+    }
+    func getWalkingSongs()-> [TrackJSONElement]{
+        
+        print("----------------WALKING-SONGS-----------------")
+        
+        //Low BPM Medium Q
+        tracks.sort{$0.q < $1.q || $0.tempo > $1.tempo} // desc
+        var trackList: [TrackJSONElement] = []
+
+        for _ in 0...songsPerTypeOfSection{
+
+            if let unwrappedTrack = tracks.popLast(){
+                trackList.append(unwrappedTrack)
+                print("---" + unwrappedTrack.artist)
+                print("---" + String(unwrappedTrack.tempo))
+                print("---" + String(unwrappedTrack.q))
+            }else{
+                print("ERROR in SORTING the TRACKS")
+            }
+
+        }
+        
+        print("----------------WALKING-SONGS-----------------")
+        
+        return tracks
+    }
+
     
 }
