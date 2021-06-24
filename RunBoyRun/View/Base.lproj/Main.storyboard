@@ -11,7 +11,6 @@
         <!--Item 2-->
         <scene sceneID="JKV-c8-nbx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lZL-NU-yMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="1Vn-6C-OAD" customClass="HomeViewController" customModule="RunBoyRun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Y8-UB-In4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -103,6 +102,7 @@
                         <outlet property="spotifyButton" destination="atk-0c-4RG" id="8xd-Wa-bYX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZL-NU-yMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-639.13043478260875" y="491.51785714285711"/>
         </scene>

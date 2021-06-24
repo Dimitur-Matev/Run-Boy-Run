@@ -4,66 +4,66 @@
 //
 //  Created by Dimo Popov on 10/06/2021.
 //
-let programString = """
-    [
-        {
-            "name": "Example 1",
-            "description": "This training program will make you feel better. I promise ;)",
-            "sections": [
-
-                {
-                    "duration": 3.5,
-                    "type": 1
-                },
-                {
-                    "duration": 3.0,
-                    "type": 2
-                },
-                {
-                    "duration": 8.4,
-                    "type": 5
-                },
-                {
-                    "duration": 4.0,
-                    "type": 1
-                },
-                {
-                    "duration": 3.5,
-                    "type": 4
-                }
-
-            ]
-        },
-        {
-            "name": "Example 2",
-            "description": "This training program will make you feel better. I promise ;)",
-            "sections": [
-
-                {
-                    "duration": 3.5,
-                    "type": 1
-                },
-                {
-                    "duration": 3.0,
-                    "type": 2
-                },
-                {
-                    "duration": 8.4,
-                    "type": 5
-                },
-                {
-                    "duration": 4.0,
-                    "type": 1
-                },
-                {
-                    "duration": 3.5,
-                    "type": 4
-                }
-            ]
-        }
-    ]
-
-"""
+//let programString = """
+//    [
+//        {
+//            "name": "Example 1",
+//            "description": "This training program will make you feel better. I promise ;)",
+//            "sections": [
+//
+//                {
+//                    "duration": 3.5,
+//                    "type": 1
+//                },
+//                {
+//                    "duration": 3.0,
+//                    "type": 2
+//                },
+//                {
+//                    "duration": 8.4,
+//                    "type": 5
+//                },
+//                {
+//                    "duration": 4.0,
+//                    "type": 1
+//                },
+//                {
+//                    "duration": 3.5,
+//                    "type": 4
+//                }
+//
+//            ]
+//        },
+//        {
+//            "name": "Example 2",
+//            "description": "This training program will make you feel better. I promise ;)",
+//            "sections": [
+//
+//                {
+//                    "duration": 3.5,
+//                    "type": 1
+//                },
+//                {
+//                    "duration": 3.0,
+//                    "type": 2
+//                },
+//                {
+//                    "duration": 8.4,
+//                    "type": 5
+//                },
+//                {
+//                    "duration": 4.0,
+//                    "type": 1
+//                },
+//                {
+//                    "duration": 3.5,
+//                    "type": 4
+//                }
+//            ]
+//        }
+//    ]
+//
+//"""
 
 import UIKit
 
@@ -82,37 +82,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        do{
-            //let tracks = try decoder.decode(TrackJSON.self, from: jsonData!)
-            let programs = try decoder.decode(ProgramJSON.self, from: jsonProgram!)
-            //print(tracks[0].analysisURL)
-            //print(programs[1].name)
-            print("READING THE JSON FILE")
-            let data = readLocalFile(forName: "suggested_playlist")
-            //var tracksJson: Data = Data()
-            //var tripManager: TripManager
-            
-            if let unwrappedData = data{
-                print("---UNWRAPED---")
-                let tracks = parse(jsonData: unwrappedData)
-                var tripManager = TripManager(tracks: tracks)
-                print("--Trip Manager-- IS -- READY")
-                
-                tripManager.getIntenseSongs()
-                tripManager.getRelaxSongs()
-                tripManager.getJoggingSongs()
-                tripManager.getWalkingSongs()
-                
-            }else{
-                print("ERROR in SORTING the TRACKS")
-            }
-            
-            
-
-        }catch{
-            print(error.localizedDescription)
-
-        }
+//        do{
+//            //let tracks = try decoder.decode(TrackJSON.self, from: jsonData!)
+//            let programs = try decoder.decode(ProgramJSON.self, from: jsonProgram!)
+//            //print(tracks[0].analysisURL)
+//            //print(programs[1].name)
+//            print("READING THE JSON FILE")
+//            let data = readLocalFile(forName: "suggested_playlist")
+//            //var tracksJson: Data = Data()
+//            //var tripManager: TripManager
+//
+//            if let unwrappedData = data{
+//                print("---UNWRAPED---")
+//                let tracks = parse(jsonData: unwrappedData)
+//                var tripManager = TripManager(tracks: tracks)
+//                print("--Trip Manager-- IS -- READY")
+//
+//                tripManager.getIntenseSongs()
+//                tripManager.getRelaxSongs()
+//                tripManager.getJoggingSongs()
+//                tripManager.getWalkingSongs()
+//
+//            }else{
+//                print("ERROR in SORTING the TRACKS")
+//            }
+//
+//
+//
+//        }catch{
+//            print(error.localizedDescription)
+//
+//        }
         return true
     }
     // MARK: UISceneSession Lifecycle

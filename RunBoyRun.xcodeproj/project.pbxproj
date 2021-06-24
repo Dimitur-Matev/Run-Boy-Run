@@ -12,6 +12,7 @@
 		128950362676B76A008FE9B8 /* ProgramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950352676B76A008FE9B8 /* ProgramManager.swift */; };
 		128950382676B77C008FE9B8 /* SectionJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950372676B77C008FE9B8 /* SectionJson.swift */; };
 		1289503A2676C365008FE9B8 /* TrackJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950392676C365008FE9B8 /* TrackJson.swift */; };
+		129AA7AB26848C1B000BA45B /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AA7AA26848C1B000BA45B /* RunViewController.swift */; };
 		2182E513C791955ABB8DD77D /* Pods_RunBoyRunTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E08A95145D7BD79E6826264 /* Pods_RunBoyRunTests.framework */; };
 		7F159A562672213400D949FF /* SpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F159A552672213400D949FF /* SpotifyManager.swift */; };
 		7F159A5C2672247200D949FF /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F159A5B2672247200D949FF /* SpotifyiOS.framework */; };
@@ -53,6 +54,7 @@
 		128950352676B76A008FE9B8 /* ProgramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramManager.swift; sourceTree = "<group>"; };
 		128950372676B77C008FE9B8 /* SectionJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SectionJson.swift; path = RunBoyRun/Resources/Managers/SectionJson.swift; sourceTree = SOURCE_ROOT; };
 		128950392676C365008FE9B8 /* TrackJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackJson.swift; path = RunBoyRun/Resources/Managers/TrackJson.swift; sourceTree = SOURCE_ROOT; };
+		129AA7AA26848C1B000BA45B /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
 		264DBD5A63E2991AEB30B0A8 /* Pods-RunBoyRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunBoyRun.debug.xcconfig"; path = "Target Support Files/Pods-RunBoyRun/Pods-RunBoyRun.debug.xcconfig"; sourceTree = "<group>"; };
 		3039A7EBB0B6144369F5FD2F /* Pods-RunBoyRunTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunBoyRunTests.release.xcconfig"; path = "Target Support Files/Pods-RunBoyRunTests/Pods-RunBoyRunTests.release.xcconfig"; sourceTree = "<group>"; };
 		674E4929FF890F627351A455 /* Pods_RunBoyRun_RunBoyRunUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunBoyRun_RunBoyRunUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				7F82D97026720E0100319F66 /* HomeViewController.swift */,
+				129AA7AA26848C1B000BA45B /* RunViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				1289503A2676C365008FE9B8 /* TrackJson.swift in Sources */,
 				128950382676B77C008FE9B8 /* SectionJson.swift in Sources */,
 				7F82D96D26720E0100319F66 /* AppDelegate.swift in Sources */,
+				129AA7AB26848C1B000BA45B /* RunViewController.swift in Sources */,
 				128950362676B76A008FE9B8 /* ProgramManager.swift in Sources */,
 				7F82D96F26720E0100319F66 /* SceneDelegate.swift in Sources */,
 			);
