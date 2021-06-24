@@ -52,6 +52,13 @@ class TripManager{
     func matchTrackToSection(){
         
     }
+    func addVocalNotifications(){
+        
+    }
+    func buildUpLocator(track: TrackJSONElement){
+        track.analysisSections.count
+        
+    }
     
     
 }

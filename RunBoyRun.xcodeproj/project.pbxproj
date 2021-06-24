@@ -20,7 +20,7 @@
 		7F73B03D267B75A900369033 /* TripManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F73B03C267B75A900369033 /* TripManager.swift */; };
 		7F82D96D26720E0100319F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D96C26720E0100319F66 /* AppDelegate.swift */; };
 		7F82D96F26720E0100319F66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D96E26720E0100319F66 /* SceneDelegate.swift */; };
-		7F82D97126720E0100319F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D97026720E0100319F66 /* ViewController.swift */; };
+		7F82D97126720E0100319F66 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82D97026720E0100319F66 /* HomeViewController.swift */; };
 		7F82D97426720E0100319F66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F82D97226720E0100319F66 /* Main.storyboard */; };
 		7F82D97626720E0200319F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F82D97526720E0200319F66 /* Assets.xcassets */; };
 		7F82D97926720E0200319F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F82D97726720E0200319F66 /* LaunchScreen.storyboard */; };
@@ -68,7 +68,7 @@
 		7F82D96926720E0100319F66 /* RunBoyRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunBoyRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F82D96C26720E0100319F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F82D96E26720E0100319F66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F82D97026720E0100319F66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F82D97026720E0100319F66 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7F82D97326720E0100319F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F82D97526720E0200319F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F82D97826720E0200319F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 		7F82D99E2672187600319F66 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7F82D97026720E0100319F66 /* ViewController.swift */,
+				7F82D97026720E0100319F66 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -507,7 +507,7 @@
 				7F73B03D267B75A900369033 /* TripManager.swift in Sources */,
 				128950342676B63D008FE9B8 /* ProgramJson.swift in Sources */,
 				7F159A562672213400D949FF /* SpotifyManager.swift in Sources */,
-				7F82D97126720E0100319F66 /* ViewController.swift in Sources */,
+				7F82D97126720E0100319F66 /* HomeViewController.swift in Sources */,
 				7FCF06E42677B6F100AB7B20 /* rawdata.swift in Sources */,
 				1289503A2676C365008FE9B8 /* TrackJson.swift in Sources */,
 				128950382676B77C008FE9B8 /* SectionJson.swift in Sources */,
